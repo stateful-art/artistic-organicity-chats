@@ -82,12 +82,12 @@ export default function Layout(props) {
           bridge new city
         </button>
 
-        <button
+        {/* <button
           className="bg-green-500 hover:bg-black text-white mx-8 my-4 py-2 px-4 rounded w-2/3 transition duration-150"
           onClick={() => goMinter()}
         >
           mint something
-        </button>
+        </button> */}
       </nav>
 
       {/* Messages */}
