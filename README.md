@@ -1,4 +1,9 @@
-# Realtime chat example using Supabase
+# Decentralized Artistic Organicity chats
+
+We have started with Rock community. 
+
+New communities could be defined by stateful.art or anyone, then attached to that art community's card on the main page.
+
 
 This is a full-stack Slack clone example using:
 
