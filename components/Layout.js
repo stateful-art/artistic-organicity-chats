@@ -23,7 +23,7 @@ export default function Layout(props) {
   };
 
   const newChannel = async () => {
-    const slug = prompt("Please enter your name");
+    const slug = prompt("Please enter a new city name to create a channel for");
     if (slug) {
       addChannel(slugify(slug), user.id);
     }
@@ -42,21 +42,28 @@ export default function Layout(props) {
         className="w-64 bg-black text-gray-100 overflow-scroll"
         style={{ maxWidth: "20%", minWidth: 150, maxHeight: "100vh" }}
       >
-        <div className="p-2 ">
-          <div className="p-2">
+        <div className="p-4">
+          <div className="p-6">
             <img src="https://www.stateful.art/rock.jpeg" width={"240px"} />
           </div>
           <hr className="m-2" />
-          <div className="p-2 flex flex-col space-y-2">
-            <h6 className="text-xs">{user?.email}</h6>
+          <div className="p-2 flex flex-col space-y-2 lg:mx-8">
+            {/* <h6 className="text-xs">{user?.email}</h6> */}
        
           
          <button
-              className="bg-blue-900 hover:bg-blue-800 text-white py-2 px-4 rounded w-full transition duration-150"
+              className="bg-blue-900 hover:bg-blue-800 text-white rounded transition duration-150 w-full lg:w-2/3  lg:mx-6  rounded w-2/3 transition duration-150"
               onClick={() => signOut()}
             >
               Log out
             </button>
+
+            <button
+          className="bg-green-500 hover:bg-blue-800 text-white md:mx-4 lg:mx-6 my-4  px-4 rounded lg:w-2/3 transition duration-150"
+          onClick={() => newChannel()}
+        >
+          bridge new city
+        </button>
           </div>
         
 
@@ -75,12 +82,7 @@ export default function Layout(props) {
           </ul>
           </div>
 
-        <button
-          className="bg-green-500 hover:bg-blue-800 text-white mx-8 my-4 py-2 px-4 rounded w-2/3 transition duration-150"
-          onClick={() => newChannel()}
-        >
-          bridge new city
-        </button>
+      
 
         {/* <button
           className="bg-green-500 hover:bg-black text-white mx-8 my-4 py-2 px-4 rounded w-2/3 transition duration-150"
